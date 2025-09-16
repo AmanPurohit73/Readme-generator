@@ -17,7 +17,7 @@ export default function ReadmeGenerator() {
     setIsLoading(true);
     try {
       const response = await fetch(
-        `https://readme-generator-7rtw.onrender.com/generate-readme?owner=${owner}&repo=${repo}`
+        `http://localhost:5000/generate-readme?owner=${owner}&repo=${repo}`
       );
       const text = await response.text();
       setReadme(text);
